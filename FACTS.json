@@ -7,11 +7,11 @@
       "kind": "deadline",
       "sourceUrl": "https://www.ada.gov/resources/2024-03-08-web-rule/",
       "sourceTitle": "ADA.gov — Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
-      "asOf": "2026-09-30",
+      "asOf": "2026-10-03",
       "appearsOn": [
         "https://compound-mcp.thecompound.tech/"
       ],
-      "lastVerified": "2026-09-30",
+      "lastVerified": "2026-10-03",
       "status": "verified"
     },
     {
@@ -21,11 +21,11 @@
       "kind": "rule",
       "sourceUrl": "https://www.irs.gov/charities-non-profits/automatic-revocation-of-exemption",
       "sourceTitle": "IRS — Automatic revocation of exemption",
-      "asOf": "2026-09-30",
+      "asOf": "2026-10-03",
       "appearsOn": [
         "https://compound-mcp.thecompound.tech/"
       ],
-      "lastVerified": "2026-09-30",
+      "lastVerified": "2026-10-03",
       "status": "verified"
     }
   ]
