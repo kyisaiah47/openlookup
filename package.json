@@ -58,7 +58,8 @@
     "health": "node ops/health/probe.mjs",
     "health:public": "node ops/health/probe.mjs --target public",
     "health:test": "node ops/health/probe.test.mjs",
-    "test:packages": "node ops/packages/test-all.mjs"
+    "test:packages": "node ops/packages/test-all.mjs",
+    "publish:packages": "node ops/packages/publish.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
