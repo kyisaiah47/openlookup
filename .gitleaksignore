@@ -17,3 +17,6 @@ src/server.js:generic-api-key:24
 # `.gitleaks.toml`: the global pre-push hook checks for one first, and a local file silently
 # replaces the estate's stricter ruleset for this whole repo.
 src/server.js:generic-api-key:37
+
+# Same publishable key, copied into the per-product CivicBinder server on 2026-10-05.
+packages/civicbinder-mcp/src/server.js:generic-api-key:12
