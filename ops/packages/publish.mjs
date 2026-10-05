@@ -48,18 +48,20 @@ function registryKeyHex() {
   return createPrivateKey(fs.readFileSync(pem)).export({ format: 'der', type: 'pkcs8' }).subarray(-32).toString('hex');
 }
 
-if (!DRY) {
-  const key = registryKeyHex();
-  if (!key) {
-    console.error('✗ no MCP registry key');
-    process.exit(1);
-  }
-  const r = sh('mcp-publisher', ['login', 'dns', '--domain', 'thecompound.tech', '--private-key', key]);
-  if (r.status !== 0) {
-    console.error(`✗ MCP registry sign-in failed: ${(r.stderr || '').trim().split('\n').pop()}`);
-    process.exit(1);
-  }
+// The registry JWT that `mcp-publisher login` caches expires within minutes: on 2026-10-05 the
+// first three servers listed and the next three were refused 401 "token is expired" while npm
+// was still publishing. So the sign-in runs again right before every registry publish.
+const REGISTRY_KEY = DRY ? null : registryKeyHex();
+if (!DRY && !REGISTRY_KEY) {
+  console.error('✗ no MCP registry key');
+  process.exit(1);
 }
+function registryLogin() {
+  const r = sh('mcp-publisher', ['login', 'dns', '--domain', 'thecompound.tech', '--private-key', REGISTRY_KEY]);
+  if (r.status !== 0) console.error(`✗ MCP registry sign-in failed: ${(r.stderr || '').trim().split('\n').pop()}`);
+  return r.status === 0;
+}
+if (!DRY && !registryLogin()) process.exit(1);
 
 let failed = 0;
 for (const dir of fs.readdirSync(path.join(ROOT, 'packages')).filter((d) => d.endsWith('-mcp'))) {
@@ -89,7 +91,9 @@ for (const dir of fs.readdirSync(path.join(ROOT, 'packages')).filter((d) => d.en
   if (live) console.log(`= ${server.name} ${server.version} already in the MCP registry`);
   else if (DRY) console.log(`would publish ${server.name} ${server.version} to the MCP registry`);
   else {
-    const r = sh('mcp-publisher', ['publish'], { cwd, stdio: ['ignore', 'inherit', 'inherit'] });
+    const r = registryLogin()
+      ? sh('mcp-publisher', ['publish'], { cwd, stdio: ['ignore', 'inherit', 'inherit'] })
+      : { status: 1 };
     if (r.status !== 0) {
       failed++;
       console.error(`✗ MCP registry publish ${server.name} failed`);
