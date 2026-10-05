@@ -1,0 +1,49 @@
+{
+  "name": "storeready-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/storeready",
+  "description": "StoreReady MCP server from Compound Labs. Reports whether the app each AI mobile-app builder produces can pass Apple App Store review, with sources. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://storeready.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/storeready-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "storeready",
+    "app-store",
+    "ios",
+    "app-builders",
+    "expo"
+  ],
+  "bin": {
+    "storeready-mcp": "bin/storeready-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/storeready-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

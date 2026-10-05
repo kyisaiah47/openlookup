@@ -1,0 +1,50 @@
+{
+  "name": "scriptprobe-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/scriptprobe",
+  "description": "ScriptProbe MCP server from Compound Labs. Checks an npm package for install scripts, network access and publisher changes before you install it. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://scriptprobe.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/scriptprobe-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "scriptprobe",
+    "npm",
+    "supply-chain",
+    "install-scripts",
+    "security",
+    "dependencies"
+  ],
+  "bin": {
+    "scriptprobe-mcp": "bin/scriptprobe-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/scriptprobe-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

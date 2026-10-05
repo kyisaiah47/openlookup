@@ -1,0 +1,49 @@
+{
+  "name": "rulestack-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/rulestack",
+  "description": "RuleStack MCP server from Compound Labs. Searches real AGENTS.md, CLAUDE.md and Cursor rules files from public repositories, scored for quality. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://rulestack.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/rulestack-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "rulestack",
+    "agents-md",
+    "claude-md",
+    "cursor-rules",
+    "agent-config"
+  ],
+  "bin": {
+    "rulestack-mcp": "bin/rulestack-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/rulestack-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

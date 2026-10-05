@@ -1,0 +1,49 @@
+{
+  "name": "skillworks-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/skillworks",
+  "description": "SkillWorks MCP server from Compound Labs. Searches published Claude Code skills, plugins and marketplaces, ranked by installs, with the install command. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://skillworks.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/skillworks-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "skillworks",
+    "claude-code",
+    "skills",
+    "plugins",
+    "agent-tools"
+  ],
+  "bin": {
+    "skillworks-mcp": "bin/skillworks-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/skillworks-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

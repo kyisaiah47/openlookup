@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "tech.thecompound/tooldrift",
+  "title": "ToolDrift MCP",
+  "description": "ToolDrift: Current AI model pricing and which models coding tools route to.",
+  "version": "0.1.0",
+  "websiteUrl": "https://tooldrift.thecompound.tech",
+  "repository": {
+    "url": "https://github.com/kyisaiah47/openlookup",
+    "source": "github",
+    "subfolder": "packages/tooldrift-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "tooldrift-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

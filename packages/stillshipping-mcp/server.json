@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "tech.thecompound/stillshipping",
+  "title": "StillShipping MCP",
+  "description": "StillShipping: Check whether a developer tool is still maintained.",
+  "version": "0.1.0",
+  "websiteUrl": "https://stillshipping.thecompound.tech",
+  "repository": {
+    "url": "https://github.com/kyisaiah47/openlookup",
+    "source": "github",
+    "subfolder": "packages/stillshipping-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "stillshipping-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "tech.thecompound/storeready",
+  "title": "StoreReady MCP",
+  "description": "StoreReady: Whether AI app builders produce apps that pass App Store review.",
+  "version": "0.1.0",
+  "websiteUrl": "https://storeready.thecompound.tech",
+  "repository": {
+    "url": "https://github.com/kyisaiah47/openlookup",
+    "source": "github",
+    "subfolder": "packages/storeready-mcp"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "storeready-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

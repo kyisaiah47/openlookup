@@ -1,0 +1,49 @@
+{
+  "name": "blockdex-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/blockdex",
+  "description": "BlockDex MCP server from Compound Labs. Searches shadcn-compatible components, blocks and hooks across public registries, with their dependencies. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://blockdex.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/blockdex-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "blockdex",
+    "shadcn",
+    "components",
+    "registry",
+    "react"
+  ],
+  "bin": {
+    "blockdex-mcp": "bin/blockdex-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/blockdex-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}

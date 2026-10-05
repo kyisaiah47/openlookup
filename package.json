@@ -57,11 +57,15 @@
     "test": "node test/smoke.mjs && node test/directories.mjs && node ops/health/probe.test.mjs",
     "health": "node ops/health/probe.mjs",
     "health:public": "node ops/health/probe.mjs --target public",
-    "health:test": "node ops/health/probe.test.mjs"
+    "health:test": "node ops/health/probe.test.mjs",
+    "test:packages": "node ops/packages/test-all.mjs"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.0",
     "express": "^4.21.0",
     "zod": "^3.24.0"
-  }
+  },
+  "workspaces": [
+    "packages/*-mcp"
+  ]
 }

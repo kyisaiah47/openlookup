@@ -1,0 +1,49 @@
+{
+  "name": "tooldrift-mcp",
+  "version": "0.1.0",
+  "mcpName": "tech.thecompound/tooldrift",
+  "description": "ToolDrift MCP server from Compound Labs. Reports current AI model pricing and which models the major coding tools route to, sampled nightly. No key and no signup.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Compound Labs <hello@thecompound.tech>",
+  "homepage": "https://tooldrift.thecompound.tech",
+  "funding": {
+    "type": "individual",
+    "url": "https://buymeacoffee.com/kyisaiah47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyisaiah47/openlookup.git",
+    "directory": "packages/tooldrift-mcp"
+  },
+  "keywords": [
+    "mcp",
+    "modelcontextprotocol",
+    "tooldrift",
+    "llm-pricing",
+    "model-comparison",
+    "ai-models",
+    "coding-agents"
+  ],
+  "bin": {
+    "tooldrift-mcp": "bin/tooldrift-mcp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node bin/tooldrift-mcp.js",
+    "test": "node test/smoke.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "express": "^4.21.0",
+    "zod": "^3.24.0"
+  }
+}
